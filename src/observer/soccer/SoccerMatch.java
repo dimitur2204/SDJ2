@@ -21,6 +21,9 @@ public class SoccerMatch {
         for(int i = 0; i < 90; i++) {
 
             int rand = random.nextInt(100);
+            if(rand < 10 || rand > 90){
+                birdSing();
+            }
             int whichTeam = random.nextInt(2);
 
             if(rand < 8) {
@@ -44,21 +47,24 @@ public class SoccerMatch {
     private void roughTackle(int whichTeam) {
         if(whichTeam == 0) {
             System.out.println(team0 + " made a rough tackle!");
-            support.firePropertyChange(team0 + "Tackle", false, true);
+            support.firePropertyChange(team0 + "Tackle", null, null);
         } else {
             System.out.println(team1 + " made a rough tackle!");
-            support.firePropertyChange(team1 + "Tackle", false, true);
+            support.firePropertyChange(team1 + "Tackle", null, null);
         }
     }
 
     private void scoreGoal(int whichTeam) {
         if(whichTeam == 0) {
             System.out.println(team0 + " scored!");
-            support.firePropertyChange(team0 + "Goal", false, true);
+            support.firePropertyChange(team0 + "Goal", null, null);
         } else {
             System.out.println(team1 + " scored!");
-            support.firePropertyChange(team1 + "Goal", false, true);
+            support.firePropertyChange(team1 + "Goal", null, null);
         }
+    }
+    private void birdSing() {
+            support.firePropertyChange("BirdSing", null, null);
     }
 
     public void addPropertyChangeListener(PropertyChangeListener listener) {
