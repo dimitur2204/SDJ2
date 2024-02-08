@@ -23,4 +23,20 @@ public class Phone {
     public void setSpeakerState(SpeakerState speakerState) {
         this.speakerState = speakerState;
     }
+
+    public void onClick() {
+       this.speakerState.click(this);
+    }
+
+    public void onVolumeUp() {
+       this.speakerState.volumeUp(this);
+    }
+
+    public void onVolumeDown() {
+       this.speakerState.volumeDown(this);
+    }
+
+    public void onMessage(String message){
+         this.speakerState.alert(this, message);
+    }
 }
