@@ -18,7 +18,7 @@ public class Silent implements SpeakerState{
     }
 
     @Override
-    public void volumeDown(Phone phone) {
+    public void volumeDown(Phone phone) throws IllegalStateException {
         throw new IllegalStateException("Speaker is already at a silent");
     }
 }

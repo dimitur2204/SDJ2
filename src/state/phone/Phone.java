@@ -16,14 +16,6 @@ public class Phone {
         this.volume = volume;
     }
 
-    public SpeakerState getSpeakerState() {
-        return speakerState;
-    }
-
-    public void setSpeakerState(SpeakerState speakerState) {
-        this.speakerState = speakerState;
-    }
-
     public void onClick() {
        this.speakerState.click(this);
     }
