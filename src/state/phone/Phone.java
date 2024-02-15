@@ -31,4 +31,8 @@ public class Phone {
     public void onMessage(String message){
          this.speakerState.alert(this, message);
     }
+
+    public void setSpeakerState(SpeakerState speakerState) {
+        this.speakerState = speakerState;
+    }
 }
