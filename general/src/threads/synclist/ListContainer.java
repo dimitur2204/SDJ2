@@ -3,7 +3,7 @@ package threads.synclist;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListContainer {
+public class ListContainer{
     private List<Integer> list;
     public ListContainer() {
         this.list = new ArrayList<>();
