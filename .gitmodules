@@ -1,3 +1,6 @@
 [submodule "vinyl-records-javafx"]
 	path = vinyl-records-javafx
 	url = https://github.com/dimitur2204/vinyl-records-javafx
+[submodule "chat-pat"]
+	path = chat-pat
+	url = https://github.com/dimitur2204/chat-pat
