@@ -1,4 +1,4 @@
-package server;
+package uppercase.server;
 
 import java.rmi.RemoteException;
 import java.util.Locale;

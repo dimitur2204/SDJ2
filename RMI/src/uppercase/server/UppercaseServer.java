@@ -1,4 +1,4 @@
-package server;
+package uppercase.server;
 
 import java.rmi.Remote;
 import java.rmi.registry.LocateRegistry;

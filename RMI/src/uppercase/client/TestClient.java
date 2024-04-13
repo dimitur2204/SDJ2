@@ -1,6 +1,6 @@
-package client;
+package uppercase.client;
 
-import server.Uppercase;
+import uppercase.server.Uppercase;
 
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
