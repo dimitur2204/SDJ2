@@ -1,25 +1,20 @@
+import java.time.Instant;
+
 //Adapter
-public class AndroidIPhoneMessageAdapter {
-    private final AndroidPhone android;
-    private final IPhone iphone;
-    public AndroidIPhoneMessageAdapter(AndroidPhone android, IPhone iphone){
-        this.android = android;
-        this.iphone = iphone;
+public class AndroidIPhoneMessageAdapter extends AndroidText {
+    private IPhoneMessage msg;
+    public AndroidIPhoneMessageAdapter(IPhoneMessage msg) {
+        super(msg.getMessage());
+        this.msg = msg;
     }
 
-    //sendInformation()
-    public void sendToIPhone(AndroidText text){
-        //convertRequest()
-        IPhoneMessage adapted = new IPhoneMessage(text.getText());
-        //sendInformation()
-        this.iphone.receiveMessage(adapted);
+    @Override
+    public String getText() {
+        return msg.getMessage();
     }
 
-    //returnInformation()
-    public void receiveFromIPhone(IPhoneMessage msg){
-        //convertResponse()
-        AndroidText adapted = new AndroidText(msg.getMessage());
-        //returnInformation()
-        this.android.receiveText(adapted);
+    @Override
+    public Instant getTimestamp() {
+        return msg.getDate().toInstant();
     }
 }
